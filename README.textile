@@ -1,0 +1,34 @@
+!http://chattycrow.com/crow3logo.png!
+
+h1. ChattyCrow - Capistrano deploy notifications library
+
+h2. Installation
+
+<pre>
+# Add to your gemfile
+gem 'chattycrow_capistrano_notifications', '~> 1.0.0'
+bundle install
+</pre>
+
+h2. Using
+
+<pre>
+# Capfile
+require 'capistrano/chatty_crow/notifications'
+</pre>
+
+<pre>
+# config/deploy.rb
+set :chattycrow_host, 'https://chattycrow.com/api/v1' # This is default, it's not required
+set :chattycrow_token, 'token'
+set :chattycrow_channel, 'channel'
+set :chattycrow_service, :jabber # (ios|android|skype|sms|email|jabber)
+set :chattycrow_contacts, ["developer0@netbrick.cz", "developer1@netbrick.cz"] # Also optional
+</pre>
+
+h2. Contribution
+
+* Fork
+* Create new branch
+* Add your hacks or feature
+* Create pull request
