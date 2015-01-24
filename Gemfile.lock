@@ -3,7 +3,15 @@ PATH
   specs:
     chattycrow_capistrano_notifications (0.0.1)
       capistrano (~> 3.1)
-      chatty_crow (~> 1.2, >= 1.2.1)
+      chatty_crow
+
+PATH
+  remote: /Users/strnadj/Projects/chattycrow_ruby
+  specs:
+    chatty_crow (1.2.2)
+      mime-types (>= 1)
+      multi_json (~> 1.0)
+      rest_client (~> 1.7)
 
 GEM
   remote: https://rubygems.org/
@@ -12,13 +20,9 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
-    chatty_crow (1.2.1)
-      mime-types (>= 1)
-      multi_json (~> 1.0)
-      rest_client (~> 1.7)
     colorize (0.7.3)
     i18n (0.6.11)
-    mime-types (2.3)
+    mime-types (2.4.3)
     multi_json (1.10.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -37,5 +41,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  chatty_crow!
   chattycrow_capistrano_notifications!
   rake

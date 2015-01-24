@@ -1,4 +1,4 @@
-!http://chattycrow.com/crow3logo.png!
+!https://avatars1.githubusercontent.com/u/9012750?v=3&s=200!
 
 h1. ChattyCrow - Capistrano deploy notifications library
 
@@ -21,14 +21,17 @@ require 'capistrano/chatty_crow/notifications'
 # config/deploy.rb
 set :chattycrow_host, 'https://chattycrow.com/api/v1' # This is default, it's not required
 set :chattycrow_token, 'token'
-set :chattycrow_channel, 'channel'
-set :chattycrow_service, :jabber # (ios|android|skype|sms|email|jabber)
-set :chattycrow_contacts, ["developer0@netbrick.cz", "developer1@netbrick.cz"] # Also optional
+set :chattycrow_services, {
+  jabber: { channel: 'channel#token', contacts: %w(abc def ghi) },
+  hipchat: { channel: 'channel#hipchat', color: :auto, notify: true }
+}
 </pre>
+
+**If you put color :auto or you don't fill color settings on hipchat and slack, it will be formatted automatically.**
 
 h2. Contribution
 
 * Fork
 * Create new branch
-* Add your hacks or feature
+* Add your hacks or features
 * Create pull request

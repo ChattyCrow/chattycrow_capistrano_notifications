@@ -1,1 +1,1 @@
-require 'capistrano/jabber/notifications'
+require 'capistrano/chatty_crow/notifications'
