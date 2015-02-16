@@ -27,7 +27,6 @@ set :chattycrow_services, {
 }
 </pre>
 
-**If you put color :auto or you don't fill color settings on hipchat and slack, it will be formatted automatically.**
 
 h2. Contribution
 
